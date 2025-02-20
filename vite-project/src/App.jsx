@@ -172,7 +172,7 @@ const images = [
   {
     id: 24,
     img: picture24,
-  },
+  }
 ];
 
 function App() {
@@ -195,9 +195,11 @@ function App() {
       <ShowcaseSection />
       <BannerTitle />
 
-      {images.map((img, index) => (
-        <PictureComponents key={index} img={img} />
-      ))}
+      <div className="picture-container">
+        {images.map((img, index) => (
+          <PictureComponents key={index} img={img} />
+        ))}
+      </div>
     </main>
   );
 }
@@ -317,7 +319,7 @@ function BannerTitle() {
 function PictureComponents({ img }) {
   return (
     <div className="picture-content">
-      <img src={img} />
+      <img src={img.img} />
     </div>
   );
 }
