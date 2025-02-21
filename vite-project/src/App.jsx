@@ -40,6 +40,8 @@ import picture22 from "./assets/Pictures-Content/picture22.png";
 import picture23 from "./assets/Pictures-Content/picture23.png";
 import picture24 from "./assets/Pictures-Content/picture24.png";
 
+import footerLogo from "./assets/footer-logo.png"
+
 const courses = [
   {
     img: imgOne,
@@ -172,7 +174,7 @@ const images = [
   {
     id: 24,
     img: picture24,
-  }
+  },
 ];
 
 function App() {
@@ -200,13 +202,16 @@ function App() {
           <PictureComponents key={index} img={img} />
         ))}
       </div>
+      <JoinUs />
+      <DesignInspiresFooter/>
+      <Footer/>
     </main>
   );
 }
 
 function Header() {
   return (
-    <header>
+    <header id="top">
       <nav>
         <a>SHOP</a>
         <a>EXPLORE</a>
@@ -224,7 +229,7 @@ function Header() {
     </header>
   );
 }
-function HeroSection() {
+function HeroSection() {  
   return (
     <div className="hero-section">
       <img src={heroLogo} className="hero-image" alt="Desk Shelf System" />
@@ -322,5 +327,58 @@ function PictureComponents({ img }) {
       <img src={img.img} />
     </div>
   );
+}
+function JoinUs() {
+  return (
+    <div className="join-us-container">
+      <h1>We Hope You'll Join Us</h1>
+      <p>READ MORE ABOUT OUR STORY</p>
+    </div>
+  );
+}
+function DesignInspiresFooter() {
+  return(
+<div className="design-footer-container">
+  <div className="design-footer-content">
+    <img src={footerLogo}/>
+    <h1>Design Inspires</h1>
+    <p>Build your dream workspace, so you can get your best work done.</p>
+  </div>
+</div>
+  )
+}
+function Footer() {
+  return(
+    <div className="footer-container">
+      <div className="footer-nav-box">
+        <div className="left-footer">
+          <a>Shop</a>
+          <a>About</a>
+          <a>Journal</a>
+          <a>Support</a>
+          <a>COVID-19 Info</a>
+          <a>Order Status</a>
+          <a>Corporate Sales</a>
+        </div>
+        <div className="right-footer">
+          <h1>Newsletter Signup</h1>
+          <p>Sign up to our Newsletter to hear about new product releases, learn about our design process, and everything else going on behind the scenes at Grovemade.</p>
+          <hr />
+        </div>
+
+        <a href="#top"><div className="btn-content">
+         GO UP
+        </div>
+        </a>
+    </div>
+        <div className="privacy-content">
+          <p>©2020 Grovemade</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+
+          <p>Site by Department</p>
+        </div>
+      </div>
+  )
 }
 export default App;
