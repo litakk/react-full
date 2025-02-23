@@ -48,18 +48,3 @@ export default Counter;
 // Рендеринг в React — это процесс обновления и отображения UI-компонентов. 
 // Он происходит при изменении состояния (state) или пропсов (props).
 // React использует Virtual DOM для оптимизации и минимизации перерисовок.
-
-
-
-const [count, setCount] = useState(0);
-
-const Increment = () => {
-  setCount((prev) => prev + 1);
-};
-
-const Decrement = () => {
-  setCount((prev) => (prev > 0 ? prev -1 : 0));
-};
-
-const SetCounter = () => {
-  setCount(0);
